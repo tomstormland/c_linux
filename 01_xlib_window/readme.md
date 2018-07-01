@@ -51,3 +51,11 @@ int main(...)
 }
 
 ```
+
+```shell
+make
+```
+
+```shell
+./01_xlib_window
+```
