@@ -1,6 +1,18 @@
 01_xlib_window
 ==============
 
+```shell
+gcc -o 01_xlib_window src/main.c -lX11
+```
+
+```shell
+make
+```
+
+```shell
+./01_xlib_window
+```
+
 ```c
 
 #include <X11/Xlib.h>
@@ -50,12 +62,4 @@ int main(...)
   return 0;
 }
 
-```
-
-```shell
-make
-```
-
-```shell
-./01_xlib_window
 ```
