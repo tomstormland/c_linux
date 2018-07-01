@@ -8,22 +8,20 @@ close window with escape key
 /* how do I do that, hmm */
 
 typedef struct {
-  int type;
-  int x, y;
-  int x_root, y_root;
-  unsigned int state;
+  ...
   unsigned int keycode;
   ...
 } XKeyEvent;
 
 typedef union _XEvent {
-  int type;
-  XAnyEvent xany;
+  ...
   XKeyEvent xkey;
   ...
 } XEvent;
 
 /* what is escape keycode, .. it is 9 */
+
+/* int main() ... */
 
 while (open) 
 {
