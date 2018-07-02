@@ -36,8 +36,8 @@ int main(int argc, char *argv[])
   border = BlackPixel(display, screen_num);
   background = WhitePixel(display, screen_num);
 
-  int window_pos_x = screen->width / 2;
-  int window_pos_y = screen->height / 2;
+  int window_pos_x = 0;
+  int window_pos_y = 0;
   /*int width = XDisplayWidth(display, screen_num);*/
 
   /*XWindowAttributes root_window_attributes;*/
