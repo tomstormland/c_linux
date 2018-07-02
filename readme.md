@@ -27,3 +27,11 @@ TODO
 15. Create message window. [OK]
 16. Change border color on pointer enter / leave.
 17. Create / use some kind of canvas.
+
+MORE
+====
+
+Beej's Guide to Network Programming
+-----------------------------------
+
+http://beej.us/guide/bgnet/
