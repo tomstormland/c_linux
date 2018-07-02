@@ -1,11 +1,13 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <X11/Xlib.h>
+#include <X11/Xutil.h>
 
 struct Interface {
   int open;
   int window_x;
   int window_y;
+  XSizeHints *size_hints;
   unsigned int window_width;
   unsigned int window_height;
   unsigned int window_border;
@@ -47,7 +49,17 @@ int interface_initialize(struct Interface *self) {
   self->window_height = 400;
   self->window_border_width = 2;
 
-  self->window = XCreateSimpleWindow(self->display, self->root_window, self->window_x, self->window_y, self->window_border_width, self->window_width, self->window_height, self->window_border, self->window_background);
+  /* set up size hints */
+  self->size_hints = XAllocSizeHints();
+  self->size_hints->flags = PMinSize|PMaxSize;
+  self->size_hints->min_width = self->window_width;
+  self->size_hints->min_height = self->window_width;
+  self->size_hints->max_width = self->window_width;
+  self->size_hints->max_height = self->window_width;
+
+  self->window = XCreateSimpleWindow(self->display, self->root_window, self->window_x, self->window_y, self->window_width, self->window_height, self->window_border_width, self->window_border, self->window_background);
+
+  XSetWMNormalHints(self->display, self->window, self->size_hints);
 
   XSelectInput(self->display, self->window, ExposureMask|KeyPressMask|ButtonPressMask|ButtonReleaseMask);
 
@@ -73,7 +85,7 @@ int interface_main_loop(struct Interface *self) {
     XNextEvent(self->display, &self->xevent);
 
     if (self->xevent.type == Expose) {
-      XDrawLine(self->display, self->window, self->gc, 10, 60, 180, 20);
+      XDrawLine(self->display, self->window, self->gc, 10, 200, 390, 200);
     }
 
     if (self->xevent.type == ButtonPress) {
