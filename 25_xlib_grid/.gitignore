@@ -1,1 +1,3 @@
+*.o
 start.sh
+25_xlib_grid
