@@ -17,6 +17,8 @@ unsigned int black_pixel;
 XSizeHints* size_hints;
 GC gc;
 
+char * text = "Tom Stormland";
+
 int main(int argc, char *argv[]) {
 
   display = XOpenDisplay(NULL);
@@ -55,7 +57,7 @@ int main(int argc, char *argv[]) {
     XNextEvent(display, &xevent);
 
     if (xevent.type == Expose) {
-      XDrawText();
+      XDrawString(display, window, gc, 10, 20, text, strlen(text));
     }
 
     if (xevent.type == KeyPress) {
