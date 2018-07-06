@@ -24,6 +24,9 @@ int main(int argc, char *argv[]) {
   /* random number between 5 and 10 */
   num = rand() % (10 + 1 - 5) + 5;
 
+  /* random number between 5 and 10 */
+  num = rand() % 6 + 5;
+
   return 0;
 }
 ```
