@@ -52,6 +52,7 @@ all:
 	$(MAKE) -C 50_read_dir
 	$(MAKE) -C 51_fork_test
 	$(MAKE) -C 52_xlib_grid_2
+	$(MAKE) -C 53_xcb_window
 
 clean:
 	$(MAKE) -C 00_test_window clean
@@ -107,3 +108,4 @@ clean:
 	$(MAKE) -C 50_read_dir clean
 	$(MAKE) -C 51_fork_test clean
 	$(MAKE) -C 52_xlib_grid_2 clean
+	$(MAKE) -C 53_xcb_window clean
