@@ -8,3 +8,6 @@ all: 00_test_window
 
 run:
 	./00_test_window
+
+clean:
+	rm -f 00_test_window *.o

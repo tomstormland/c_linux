@@ -1,4 +1,5 @@
 #include <X11/Xlib.h>
+#include <X11/Xutil.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -15,6 +16,7 @@ int main(int argc, char *argv[])
   Window root_window;
   unsigned long border;
   unsigned long background;
+  XSizeHints *size_hints;
 
   display = XOpenDisplay(NULL);
 
@@ -30,7 +32,16 @@ int main(int argc, char *argv[])
   border = BlackPixel(display, screen);
   background = WhitePixel(display, screen);
 
-  window = XCreateSimpleWindow(display, root_window, 10, 10, 100, 100, 1, border, background);
+  size_hints = XAllocSizeHints();
+  size_hints->flags = PMinSize|PMaxSize;
+  size_hints->min_width = 400;
+  size_hints->min_height = 400;
+  size_hints->max_width = 400;
+  size_hints->max_height = 400;
+
+  window = XCreateSimpleWindow(display, root_window, 0, 0, 400, 400, 1, border, background);
+
+  XSetWMNormalHints(display, window, size_hints);
 
   XSelectInput(display, window, ExposureMask|KeyPressMask);
 

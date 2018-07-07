@@ -34,7 +34,7 @@ int main(int argc, char *argv[])
   border = BlackPixel(display, screen);
   background = WhitePixel(display, screen);
 
-  window = XCreateSimpleWindow(display, root_window, 10, 10, 200, 200, 1, border, background);
+  window = XCreateSimpleWindow(display, root_window, 0, 0, 200, 200, 1, border, background);
 
   XSizeHints *size_hints = XAllocSizeHints();
 

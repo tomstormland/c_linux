@@ -8,3 +8,6 @@ all: 17_window_enter_background_red_leave_blue
 
 run: 
 	./17_window_enter_background_red_leave_blue
+
+clean:
+	rm -f 17_window_enter_background_red_leave_blue *.o

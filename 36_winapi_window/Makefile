@@ -12,3 +12,6 @@ run:
 
 file:
 	file 36_winapi_window.exe
+
+clean:
+	rm -f *.o 36_winapi_window

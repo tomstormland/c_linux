@@ -9,3 +9,6 @@ all: 25_xlib_grid
 
 run:
 	./25_xlib_grid
+
+clean:
+	rm -f *.o 25_xlib_grid

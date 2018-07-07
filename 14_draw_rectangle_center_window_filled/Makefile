@@ -9,3 +9,6 @@ all: 14_draw_rectangle_center_window_filled
 
 run:
 	./14_draw_rectangle_center_window_filled
+
+clean:
+	rm -f 14_draw_rectangle_center_window_filled *.o

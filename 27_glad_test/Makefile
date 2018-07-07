@@ -17,5 +17,8 @@ main.o: src/main.c
 glad.o: GL/src/glad.c
 	$(CC) $(CFLAGS) -o $@ -c $^ 
 
+clean:
+	rm -f *.o 27_glad_test
+
 run:
 	./27_glad_test

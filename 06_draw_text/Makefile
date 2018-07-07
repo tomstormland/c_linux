@@ -9,3 +9,6 @@ all: 06_draw_text
 
 run:
 	./06_draw_text
+
+clean:
+	rm -f 06_draw_text *.o

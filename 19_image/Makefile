@@ -8,3 +8,6 @@ all: 19_image
 
 run:
 	./19_image
+
+clean:
+	rm -f *.o 19_image

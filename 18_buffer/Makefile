@@ -8,3 +8,6 @@ all: 18_buffer
 
 run:
 	./18_buffer
+
+clean:
+	rm -f *.o 18_buffer

@@ -8,3 +8,6 @@ all: 11_draw_pixel_center_window
 
 run:
 	./11_draw_pixel_center_window
+
+clean:
+	rm -f 11_draw_pixel_center_window *.o
