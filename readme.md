@@ -27,6 +27,26 @@ TODO
 15. Create message window. [OK]
 16. Change border color on pointer enter / leave.
 17. Create / use some kind of canvas.
+18. Distance between two points.
+19. Walking animation.
+20. Running animation.
+21. Loading animation.
+22. Obtain item by walkin over it.
+23. Execute action by being near it.
+24. Pick up item animation.
+25. Character model.
+26. Car Model.
+27. House Model.
+28. Create 100 random lines.
+29. What are particles.
+30. Create Ball With OpenGL.
+31. Jumping animation.
+32. Convert pointer position to 3D World Coordinates.
+33. Download and image if does not exist.
+34. C Web Server.
+35. How to create ur own browser.
+36. What is motion.
+
 
 MORE
 ====
