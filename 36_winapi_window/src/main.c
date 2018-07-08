@@ -1,3 +1,5 @@
+#define _UNICODE
+
 #include <windows.h>
 #include <stdio.h>
 
