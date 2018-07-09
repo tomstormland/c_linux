@@ -85,3 +85,13 @@ Coding Math
 -----------
 
 https://www.youtube.com/watch?v=zm9bqSSiIdo&list=PL7wAPgl1JVvUEb0dIygHzO4698tmcwLk9
+
+OpenGL Text Rendering
+---------------------
+
+https://en.wikibooks.org/wiki/OpenGL_Programming/Modern_OpenGL_Tutorial_Text_Rendering_01
+
+OpenGL Tutorials
+-----------------
+
+https://gitlab.com/wikibooks-opengl/modern-tutorials
