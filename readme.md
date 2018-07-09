@@ -75,3 +75,8 @@ GL/GLES/EGL/GLX/WGL Loader-Generator
 -------------------------------------
 
 https://github.com/Dav1dde/glad
+
+Single-file public domain libraries
+-------------------------------------
+
+https://github.com/nothings/stb
