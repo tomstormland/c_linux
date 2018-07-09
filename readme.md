@@ -215,3 +215,22 @@ inet_ntop(AF_INET6, &(sa6.sin6_addr), ip6, INET6_ADDRSTRLEN);
 
 printf("The IP6 address is: %s.\n", ip6);
 ```
+
+MORE
+------
+
+```c
+struct sockaddr_in sa;
+struct sockaddr_in6 sa6;
+
+sa.sin_addr.s_addr = INADDR_ANY; /* use IPv4 address */
+sa6.sin6_addr = in6addr_any; /* use IPv6 address */
+
+struct in6_addr ia6 = IN6ADDR_ANY_INIT;
+
+
+- Instead of inet_aton() or inet_addr(), use inet_pton().
+- Instead of inet_ntoa(), use inet_ntop().
+- Instead of gethostbyname(), use the superior getaddrinfo().
+- Instead of gethostbyaddr(), use the superior getnameinfo() (although gethostbyaddr() can still work with IPv6).
+```
