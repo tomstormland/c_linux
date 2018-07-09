@@ -74,6 +74,7 @@ TODO
 34. C Web Server.
 35. How to create ur own browser.
 36. What is motion.
+37. What is linked list.
 
 
 MORE
@@ -128,3 +129,89 @@ Mouse Picking with Ray Casting
 --------------------------------------
 
 http://antongerdelan.net/opengl/raycasting.html
+
+socket
+=======
+
+```c
+struct addrinfo {
+  int ai_flags; /* AI_PASSIVE, AI_CANONNAME */
+  int ai_family; /* AF_INET, AF_INET6, AF_UNSPEC */
+  int ai_socktype; /* SOCK_STREAM, SOCK_DGRAM */
+  int ai_protocol; /* use 0 for "any" */
+  int size_t ai_addrlen; /* size of ai_addr in bytes */
+  struct sockaddr *ai_addr; /* struct sockaddr _in or _in6 */
+  char *ai_canonname; /* full canonical hostname */
+  struct addrinfo *ai_next; /* linked list, next node */
+};
+
+struct sockaddr {
+  unsigned short sa_family; /* address family, AF_... */
+  char sa_data[14]; /* 14 bytes of protocol address */
+};
+
+struct sockaddr_in {
+  short int sin_family; /* address family, AF_INET */
+  unsigned short int sin_port; /* port number */
+  struct in_addr sin_addr; /* internet address */
+  unsigned char sin_zero[8]; /* same size as struct sockaddr */
+};
+
+struct in_addr {
+  uint32_t s_addr; /* 32-bit int (4 bytes) */
+};
+
+struct sockaddr_in6 {
+  u_int16_t sin6_family; /* address family, AF_INET6 */
+  u_int16_t sin6_port; /* port number, network byte order */
+  u_int32_t sin6_flowinfo; /* IPv6 flow information */
+  struct in6_addr sin6_addr; /* IPv6 address */
+  u_int32_t sin6_scope_id; /* scope id */
+};
+
+struct in6_addr { 
+  unsigned char s6_addr[16]; /* IPv6 address */
+};
+
+struct sockaddr_storage {
+  sa_family_t ss_family; /* address family */
+
+  /* ignore rest ? */
+};
+```
+
+MORE
+------
+```c
+
+/* ip addresses, part deux */
+struct sockaddr_in sa; /* IPv4 */
+struct sockaddr_in6 sa6; /* IPv6 */
+
+inet_pton(AF_INET, "127.0.0.1", &(sa.sin_addr)); /* IPv4 */
+inet_pton(AF_INET6, "2001:db8:63b3:1::3490", &(sa6.sin6_addr)); /* IPv6 */
+/* PS: old ways (inet_addr(), inet_aton()) */
+```
+
+MORE
+----
+
+- IPv4
+```c
+char ip4[INET_ADDRSTRLEN]; /* space to hold the IPv4 str */
+struct sockaddr_in sa; /* pretend this is loaded with somethign */
+
+inet_ntop(AF_INET, &(sa.sin_addr), ip4, INSET_ADDRSTRLEN);
+
+printf("The IPv4 address is: %s.\n", ip4);
+```
+
+- IPv6
+```c
+char ip6[INET6_ADDRSTRLEN]; /* space to hold the IPv6 str */
+struct sockaddr_in6 sa6; /* pretend ... */
+
+inet_ntop(AF_INET6, &(sa6.sin6_addr), ip6, INET6_ADDRSTRLEN);
+
+printf("The IP6 address is: %s.\n", ip6);
+```
