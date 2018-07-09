@@ -65,3 +65,13 @@ OpenGL Programming Guide
 -------------------------
 
 http://www.glprogramming.com/red/
+
+Linear Math Library
+-------------------
+
+https://github.com/datenwolf/linmath.h
+
+GL/GLES/EGL/GLX/WGL Loader-Generator 
+-------------------------------------
+
+https://github.com/Dav1dde/glad
