@@ -55,3 +55,13 @@ Beej's Guide to Network Programming
 -----------------------------------
 
 http://beej.us/guide/bgnet/
+
+Learn OpenGL Resources
+-------------------------
+
+https://learnopengl.com/
+
+OpenGL Programming Guide
+-------------------------
+
+http://www.glprogramming.com/red/
