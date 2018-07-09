@@ -12,12 +12,12 @@ endif
 LIBS += -municode
 LIBS += -mwindows 
 
-all: test 36_winapi_window
+all: test 36_winapi_window.exe
 
 test:
 	# OP: $(UNAME)
 
-36_winapi_window: src/main.c
+36_winapi_window.exe: src/main.c
 	$(CC) -o $@ $^ $(LIBS)
 
 run:
@@ -31,4 +31,4 @@ file:
 	file 36_winapi_window.exe
 
 clean:
-	rm -f *.o 36_winapi_window
+	rm -f *.o 36_winapi_window.exe

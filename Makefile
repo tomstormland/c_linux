@@ -53,6 +53,12 @@ all:
 	$(MAKE) -C 51_fork_test
 	$(MAKE) -C 52_xlib_grid_2
 	$(MAKE) -C 53_xcb_window
+	$(MAKE) -C 54_xcb_opengl
+	$(MAKE) -C 55_administration
+	$(MAKE) -C 56_xlib_random_lines
+	$(MAKE) -C 57_xlib_motion
+	$(MAKE) -C 58_xlib_mouse_wheel
+	$(MAKE) -C 59_xlib_container_box
 
 clean:
 	$(MAKE) -C 00_test_window clean
@@ -109,3 +115,9 @@ clean:
 	$(MAKE) -C 51_fork_test clean
 	$(MAKE) -C 52_xlib_grid_2 clean
 	$(MAKE) -C 53_xcb_window clean
+	$(MAKE) -C 54_xcb_opengl clean
+	$(MAKE) -C 55_administration clean
+	$(MAKE) -C 56_xlib_random_lines clean
+	$(MAKE) -C 57_xlib_motion clean
+	$(MAKE) -C 58_xlib_mouse_wheel clean
+	$(MAKE) -C 59_xlib_container_box clean

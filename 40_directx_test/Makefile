@@ -3,9 +3,9 @@ CC = i686-w64-mingw32-g++
 LIBS += -mwindows 
 LIBS += -ld3d9
 
-all: 40_directx_test
+all: 40_directx_test.exe
 
-40_directx_test: src/main.c
+40_directx_test.exe: src/main.c
 	$(CC) -o $@ $^ $(LIBS)
 
 run:

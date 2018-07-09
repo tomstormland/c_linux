@@ -3,9 +3,9 @@ CC = i686-w64-mingw32-gcc
 LIBS += -mwindows 
 LIBS += -lopengl32
 
-all: 37_winapi_opengl
+all: 37_winapi_opengl.exe
 
-37_winapi_opengl: src/main.c
+37_winapi_opengl.exe: src/main.c
 	$(CC) -o $@ $^ $(LIBS)
 
 run:
